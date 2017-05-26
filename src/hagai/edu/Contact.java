@@ -11,6 +11,7 @@ package hagai.edu;
 //getters and setters
 //hashcode
 //equals
+    //to string
 //finaly , implements Comparable<Contacts>
 
 public class Contact implements Comparable<Contact> {
@@ -93,9 +94,16 @@ public class Contact implements Comparable<Contact> {
         }
 
 
+
         return phone.compareTo(o.phone);
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }

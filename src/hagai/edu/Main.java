@@ -6,10 +6,27 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        //        treeSetDemo();
 
-        treeSetDemo();
+        Map<String , Contact> map = new HashMap<>();
+        map.put("Moe" , new Contact("Moe" , "Green", "050675889"));//android Shared prefs , Bundle , Intend (Bundle)
+
+        Map <String , Contact> tree = new TreeMap<>();
+        tree.put("A" , new Contact("Dave" ,"D","D"));
+        tree.put("C" , new Contact("Gil" ,"D","D"));
+        tree.put("B" , new Contact("Aba" ,"D","D"));
+
+        for (String s : tree.keySet()){
+            System.out.println(s);
+            System.out.println(tree.get(s));
+
+        }
+
 
     }
+
+    //Must implement comparable
+
     //set methods
     //add remove
 
