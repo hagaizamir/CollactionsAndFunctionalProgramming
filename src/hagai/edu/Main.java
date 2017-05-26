@@ -1,42 +1,69 @@
 package hagai.edu;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        getNames();
+
+        treeSetDemo();
 
     }
-    public  static Deque<String> getNames (){
-        //very bad for random access
-        Deque<String> names = new LinkedList<>();
+    //set methods
+    //add remove
 
+    public  static void treeSetDemo (){
 
-        names.add("Codee");
-        names.add("Mike");
-        names.add("Dave");
-        names.add("Moe");
-        names.add("Moana");
-        names.offer("Moana");
+        Set<String> names = new TreeSet<>();
+        System.out.println(names.add("Codee"));//true
+        System.out.println(names.add("Codee"));//false
+        System.out.println(names.add("Codee"));//false
+        System.out.println(names.add("Mike"));//true
+        System.out.println(names.add("Dave"));//true
+        System.out.println(names.add("Moe"));//true
+        System.out.println(names.add("Moana"));//true
 
-        System.out.println(names.peek());//codee - only a peel
-        System.out.println(names.element());//codee  - retrieve but doesn't remove or exception
-        System.out.println(names.poll());//codee - look and remove or null
-        System.out.println(names.remove());//mike - remove or exception
-
-        //Deque
-        names.pop();//remove element or throw
-        names.push("Mira");//push
+        names.forEach(System.out::println);
 
 
 
+        }
+    //set methods
+    //add remove
+    public  static void hashSetDemo (){
 
-        return names;
+        Set<String> names = new HashSet<>();
+        System.out.println(names.add("Codee"));//true
+        System.out.println(names.add("Codee"));//false
+        System.out.println(names.add("Codee"));//false
+        System.out.println(names.add("Mike"));//true
+        System.out.println(names.add("Dave"));//true
+        System.out.println(names.add("Moe"));//true
+        System.out.println(names.add("Moana"));//true
+
+        names.forEach(System.out::println);
+
+
+
+
+
 
     }
+
+
+
+    private static void print(String s) {
+        System.out.println(s);
+
+
+
+
+
+
+
+
+    }
+
+
 }
